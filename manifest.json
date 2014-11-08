@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Maple Leaf",
+  "description": "This is a maple leaf.",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "permissions": [
+    "bookmarks",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "html/MapleLeaf.html"
+  }
+}
