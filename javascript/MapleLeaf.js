@@ -4,7 +4,16 @@ window.onload = function() {
 	var bookmarks = ["website1", "website2"];
 	userLeaf = new leaf(bookmarks, "Jake");
 	document.getElementById("hello").innerHTML = "Hello " + userLeaf.username;
-	loadBookmarks();
+	// loadBookmarks();
+
+	chrome.storage.sync.set({'userLeaf': userLeaf});
+	chrome.storage.sync.get('userLeaf', function(result) {
+		var newBookmarks = result.userLeaf.bookmarks;
+		console.log(newBookmarks.toString());
+		console.log(result.userLeaf.username);
+		userLeaf.bookmarks = newBookmarks;
+		loadBookmarks();
+	});
 }
 
 function loadBookmarks() {
