@@ -26,9 +26,12 @@ function loadLeaves(results) {
 		var name = leaves[i].leafName;
 		var newLeaf = document.createElement("li");
 		var leafLink = document.createElement("a");
+		var deleteLeaf = document.createElement("a");
+		deleteLeaf.innerHTML = "x";
 		leafLink.innerHTML = name;
 		leafLink.setAttribute("href", "MapleLeaf.html");
 		newLeaf.appendChild(leafLink);
+		newLeaf.appendChild(deleteLeaf);
 		document.getElementById("leaves").appendChild(newLeaf);
 	}
 }
