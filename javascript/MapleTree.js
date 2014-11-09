@@ -21,6 +21,7 @@ function addNewLeaf() {
 function loadLeaves(results) {
 	leaves = results.leaves;
 	console.log(results);
+	document.getElementById("leaves").innerHTML = "";
 	for (var i = 0; i < leaves.length; i++) {
 		var name = leaves[i].leafName;
 		var newLeaf = document.createElement("li");
