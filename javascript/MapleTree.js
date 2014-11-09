@@ -1,13 +1,7 @@
 "use strict";
 var leaves;
-var setLeaves = false;
 
 window.onload = function() {
-	if (!setLeaves) {
-		chrome.storage.sync.set({leaves: []}), function() {
-			console.log("Leaves not set! Initializing to empty...");
-		}
-	}
 	chrome.storage.sync.get(loadLeaves);
 	document.getElementById("addLeaf").onclick = addNewLeaf;
 }
@@ -25,10 +19,15 @@ function addNewLeaf() {
 }
 
 function loadLeaves(results) {
-	setLeaves = true;
 	leaves = results.leaves;
 	console.log(results);
-	for (var i = 0; i < results.length; i++) {
-
+	for (var i = 0; i < leaves.length; i++) {
+		var name = leaves[i].leafName;
+		var newLeaf = document.createElement("li");
+		var leafLink = document.createElement("a");
+		leafLink.innerHTML = name;
+		leafLink.setAttribute("href", "MapleLeaf.html");
+		newLeaf.appendChild(leafLink);
+		document.getElementById("leaves").appendChild(newLeaf);
 	}
 }
