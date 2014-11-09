@@ -25,7 +25,7 @@ function loadBookmarks() {
 		// getting the new list element set up
 		bookmarkLink.setAttribute("href", url);
 		bookmarkLink.innerHTML = name;
-		favicon.setAttribute("src", favicon);
+		favicon.setAttribute("src", faviconUrl);
 		favicon.setAttribute("alt", "favicon");
 		
 		// adding it to the DOM
