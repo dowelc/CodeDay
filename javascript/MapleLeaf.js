@@ -1,7 +1,7 @@
 "use strict";
 var userLeaf;
 window.onload = function() {
-	userLeaf = new leaf(["website1", "website2"], "Jake");
+	userLeaf = new leaf([], "Jake");
 	// updating userLeaf in storage
 	chrome.bookmarks.getTree(function(results) {
 		userLeaf.bookmarks = results[0];
@@ -9,6 +9,7 @@ window.onload = function() {
 		loadBookmarks();
 	});
 
+	document.getElementById("newLeaf").onclick = makeNewLeaf();
 
 }
 
@@ -35,6 +36,6 @@ function loadBookmarks() {
 	}
 }
 
-function printstuff() {
-	console.log(userLeaf.bookmarks.children[0].children[2].title);
+function makeNewLeaf() {
+	
 }
