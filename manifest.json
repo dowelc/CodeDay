@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Maple Leaf",
-  "description": "This is a maple leaf.",
+  "name": "Maple Tree",
+  "description": "Welcome to your tree.",
   "version": "1.0",
   "icons": {
     "16": "icon.png",
