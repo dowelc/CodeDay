@@ -1,4 +1,4 @@
-function leaf(bookmarks, username) {
+function leaf(bookmarks, leafName) {
 	this.bookmarks = bookmarks;
-	this.username = username;
+	this.leafName = leafName;
 }

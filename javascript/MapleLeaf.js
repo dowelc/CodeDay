@@ -9,8 +9,6 @@ window.onload = function() {
 		loadBookmarks();
 	});
 
-	document.getElementById("newLeaf").onclick = makeNewLeaf();
-
 }
 
 function loadBookmarks() {
@@ -34,8 +32,4 @@ function loadBookmarks() {
 		newBookmark.appendChild(bookmarkLink);
 		document.getElementById("bookmarks").appendChild(newBookmark);
 	}
-}
-
-function makeNewLeaf() {
-	
 }
