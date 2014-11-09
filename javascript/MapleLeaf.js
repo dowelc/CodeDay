@@ -17,15 +17,19 @@ function loadBookmarks() {
 		// getting variables set up
 		var newBookmark = document.createElement("li");
 		var bookmarkLink = document.createElement("a");
+		var favicon = document.createElement("img");
 		var name = userLeaf.bookmarks.children[0].children[i].title;
 		var url = userLeaf.bookmarks.children[0].children[i].url;
+		var faviconUrl = "http://www.google.com/s2/favicons?domain=" + url;
 		
 		// getting the new list element set up
 		bookmarkLink.setAttribute("href", url);
-		console.log(userLeaf.bookmarks.children[0].children[i].title);
 		bookmarkLink.innerHTML = name;
+		favicon.setAttribute("src", favicon);
+		favicon.setAttribute("alt", "favicon");
 		
 		// adding it to the DOM
+		newBookmark.appendChild(favicon);
 		newBookmark.appendChild(bookmarkLink);
 		document.getElementById("bookmarks").appendChild(newBookmark);
 	}
